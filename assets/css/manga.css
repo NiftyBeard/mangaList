@@ -1,0 +1,205 @@
+/* -----------------------------------------------------------
+   AGGRESSIVE MANGA REDESIGN — FULL THEME REWRITE
+   ----------------------------------------------------------- */
+
+/* --- Fonts: Heavy Brush + Handwritten --- */
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Mai&family=Caveat+Brush&family=Rock+Salt&display=swap');
+
+:root {
+  --ink: #000;
+  --paper: #f7f4e9;
+  --shadow: rgba(0,0,0,0.35);
+  --gray: #3a3a3a;
+
+  --header-font: 'Yuji Mai', 'Rock Salt', serif;
+  --body-font: 'Caveat Brush', sans-serif;
+
+  --panel-border: 6px solid var(--ink);
+  --panel-shadow: 6px 6px 0 var(--ink);
+}
+
+/* --- Global --- */
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: var(--paper);
+  background-image: url('/assets/manga-paper-texture.png');
+  background-size: 600px;
+  background-repeat: repeat;
+  color: var(--gray);
+  font-family: var(--body-font);
+  letter-spacing: 0.7px;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* --- Headings: Dramatic Brush Calligraphy --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font);
+  font-weight: 900;
+  color: var(--ink);
+  text-shadow: 2px 2px 0 var(--shadow);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.4rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.6rem; }
+
+/* --- Links: Thick Ink Underlines --- */
+a {
+  color: var(--ink);
+  text-decoration-thickness: 4px;
+  text-underline-offset: 6px;
+  font-weight: 700;
+}
+a:hover {
+  color: var(--gray);
+}
+
+/* --- Manga Panel Containers --- */
+.panel,
+.post-preview,
+.blog-post,
+.page-content,
+.intro-header {
+  background: var(--paper);
+  border: var(--panel-border);
+  box-shadow: var(--panel-shadow);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+/* --- Brush Stroke Section Divider --- */
+.manga-divider {
+  width: 100%;
+  height: 50px;
+  background-image: url('/assets/brush-stroke.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 3rem 0;
+}
+
+/* --- Pure CSS Brush Stroke (fallback) --- */
+.manga-divider.css {
+  height: 30px;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--ink),
+    var(--ink) 6px,
+    transparent 10px
+  );
+  filter: blur(1px);
+}
+
+/* --- Navbar: Manga Banner --- */
+.navbar-custom {
+  background-color: var(--paper);
+  border-bottom: var(--panel-border);
+  box-shadow: 0 6px 0 var(--ink);
+  padding: 1rem 0;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  font-family: var(--header-font);
+  font-weight: 900;
+  color: var(--ink);
+  text-shadow: 1px 1px 0 var(--shadow);
+}
+
+/* --- Footer: Heavy Ink Footer --- */
+footer {
+  background-color: var(--paper);
+  border-top: var(--panel-border);
+  box-shadow: 0 -6px 0 var(--ink);
+  padding: 2rem;
+  font-family: var(--body-font);
+  text-align: center;
+}
+
+/* --- Images: Ink Outline Panels --- */
+img {
+  border: var(--panel-border);
+  border-radius: 6px;
+  box-shadow: var(--panel-shadow);
+  max-width: 100%;
+}
+
+/* --- Tables: Hand‑drawn Grid --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--paper);
+  border: var(--panel-border);
+  box-shadow: var(--panel-shadow);
+}
+
+table th, table td {
+  border: 3px dashed var(--ink);
+  padding: 0.8rem;
+  font-family: var(--body-font);
+}
+
+/* --- Code Blocks: Ink Panels --- */
+pre, code {
+  background: #fff;
+  border: 4px solid var(--ink);
+  box-shadow: 5px 5px 0 var(--ink);
+  font-family: 'Caveat Brush', monospace;
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+/* --- Blockquotes: Brush Stroke Left Bar --- */
+blockquote {
+  border-left: 12px solid var(--ink);
+  padding-left: 1.5rem;
+  font-style: italic;
+  background: rgba(0,0,0,0.05);
+  box-shadow: inset -4px 0 0 var(--ink);
+}
+
+/* --- Pagination: Manga Tabs --- */
+.pagination .page-link {
+  background: var(--paper);
+  border: var(--panel-border);
+  box-shadow: var(--panel-shadow);
+  font-family: var(--header-font);
+  font-weight: 900;
+  color: var(--ink);
+}
+
+/* --- Search Overlay: Dark Manga Panel --- */
+#beautifuljekyll-search-overlay {
+  background: rgba(0,0,0,0.85);
+  font-family: var(--header-font);
+  color: #fff;
+}
+
+/* --- Notification Boxes: Ink Panels --- */
+.box-note,
+.box-warning,
+.box-error,
+.box-success {
+  border: var(--panel-border);
+  box-shadow: var(--panel-shadow);
+  padding: 1.5rem;
+  font-family: var(--body-font);
+}
+
+/* --- Horizontal Rule: Brush Stroke --- */
+hr {
+  border: none;
+  height: 40px;
+  background-image: url('/assets/brush-stroke.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 3rem 0;
+}
